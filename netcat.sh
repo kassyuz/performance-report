@@ -21,13 +21,13 @@ helpMsg(){
 	echo "  netcat.sh -H[destination] -L[port]"
 	echo ""
 	echo "		-H : destination host that will check"
-	echo "		-L : destination host port that will check"
+	echo "		-L : destination host port"
 	exit 3;
 }
 
-if [[ "$#" -lt 1 ]]; then
+if [[ "$#" -lt 2 ]]; then
 	echo "Required args is missing";
-	echo $#;
+	helpMsg
 	exit 1;
 fi
 
